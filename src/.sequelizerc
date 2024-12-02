@@ -1,0 +1,16 @@
+const { resolve} = require("node:path")
+ /*Importa a função `resolve` do módulo `path` para lidar com caminhos de 
+ arquivos de forma cross-platform 
+ (compatível com diferentes sistemas operacionais)*/
+
+// Exporta um objeto de configuração para ser usado pelo Sequelize ou outros módulos
+module.export ={
+     // Caminho para o arquivo de configuração do banco de dados
+  config: resolve(__dirname, 'src', 'config', 'database.js'),
+  
+  // Caminho para a pasta onde os modelos (models) estão localizados
+  'models-path': (__dirname, 'src','app','models'),
+  
+   // Caminho para a pasta onde as migrações estão localizadas
+   'migrations-path': (__dirname, 'src', 'database', 'migrations')
+}
