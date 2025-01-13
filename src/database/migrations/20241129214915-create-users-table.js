@@ -28,12 +28,12 @@ module.exports = {
        type: Sequelize.STRING,
        allowNull: false,
        unique: true,
-       password_hash:{ //senha criptrografada do tipo string 
-        type: Sequelize.STRING,
-        allowNull: false // não pode ser nulo 
-       }
      },
-     adimin: {
+     password_hash:{ //senha criptrografada do tipo string 
+      type: Sequelize.STRING,
+      allowNull: false // não pode ser nulo 
+     },
+     admin: {
       type: Sequelize.BOOLEAN,
       defaultValue: false 
     },
@@ -41,7 +41,7 @@ module.exports = {
       type: Sequelize.DATE,
       allowNull: false
     },
-    update_at:{
+    updated_at:{
       type: Sequelize.DATE,
       allowNull: false 
     }
